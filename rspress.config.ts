@@ -10,6 +10,7 @@ export default defineConfig({
     dark: '/rspress-dark-logo.png',
   },
   themeConfig: {
+    
     socialLinks: [
       {
         icon: 'github',

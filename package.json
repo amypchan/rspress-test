@@ -8,7 +8,9 @@
     "preview": "rspress preview"
   },
   "dependencies": {
-    "rspress": "^1.40.2"
+    "@tailwindcss/cli": "^4.1.12",
+    "rspress": "^1.40.2",
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "@types/node": "^18.11.17"
