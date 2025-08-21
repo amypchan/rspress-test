@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <!-- Google Tag Manager -->
+        <script>
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5P9ZRRG');
+        </script>
+        <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link data-rh="true" rel="icon" href="/assets/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <meta name="Datacoves Docs" content="Datacoves documentation" />
+    <title>Datacoves Docs</title>
+    <meta name="description" content="Start your journey with the Datacoves platform: See essential guides for onboarding or key resources for DataOps, dbt, Airflow, VS Code support and more.">
+   
+    <!-- Themes (light + dark) -->
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme: dark)"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+    />
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme: light)"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+    />
+
+    <!-- Custom Styles -->
+    <style>
+      :root {
+        --cover-heading-color: #00044a;
+        --cover-blockquote-color: #00044a;
+      }
+      .sidebar-nav a {
+        white-space: normal;
+      }
+      /* selector for "edit on github" link */
+      .markdown-section p[style*="float: right"] {
+        position: fixed;
+        bottom: 0px;
+        right: 20px;
+      }
+      @media (max-width: 480px) {
+        .app-nav {
+          display: none;
+        }
+        /* selector for "edit on github" link */
+        .markdown-section p[style*="float: right"] {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P9ZRRG"
+      height="0" width="0" style="display:none;visibility:hidden">
+      </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->    
+    <div id="app"></div>
+
+    <script>
+       // Function to get parameter value from the fragment identifier
+       function getParameterValue(paramName) {
+        var match = window.location.hash.match(
+          new RegExp("[?&]" + paramName + "=([^&]+)")
+        );
+        return match ? match[1] : null;
+}
+
+      // Docsify Configuration
+      window.$docsify = {
+        name: "Datacoves Docs",
+        loadSidebar: true,
+        loadNavbar: getParameterValue("navbar") !== "false",
+        // coverpage: true,
+        auto2top: true,
+        // subMaxLevel: 3,
+        alias: {
+          "/.*/_sidebar.md": "/_sidebar.md",
+          "/.*/_navbar.md": "/_navbar.md",
+        },
+        subMaxLevel: 0,
+        sidebarDisplayLevel: 0,
+        // coverpage: "cover.md",
+        logo:
+          getParameterValue("logo") !== "false"
+            ? "/assets/dc-logo.svg"
+            : undefined,
+        autoFooter: {
+          name: "datacoves.com",
+          copyYear: 2021,
+          url: "https://datacoves.com",
+          customStyle: "sidebar",
+          policy: "https://datacoves.com/privacy-policy",
+          terms: "https://datacoves.com/terms-of-service",
+          cookies: false,
+        },
+        tabs: {
+          persist: true, // default
+          sync: true, // default
+          theme: 'classic', // default
+          tabComments: true, // default
+          tabHeadings: true // default
+        }
+      };
+    </script>
+
+    <!-- Required -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    <!-- docsify-tabs (latest v1.x.x) -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script> 
+
+    <!-- Recommended -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+    
+    <!-- Flexible Alerts -->
+    <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
+    <script>
+      window.$docsify.plugins = [
+        EditOnGithubPlugin.create(
+          "https://github.com/datacoves/docs/blob/main/docs/",
+          null,
+          null
+        ),
+      ].concat(window.$docsify.plugins);
+    </script>
+  </body>
+</html>

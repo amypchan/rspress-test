@@ -1,0 +1,22 @@
+[
+  {
+    "text": "datacoves.com",
+    "link": "https://datacoves.com",
+    "activeMatch": "https://datacoves.com"
+  },
+  {
+    "text": "Learning Resources",
+    "link": "https://datacoves.com/learning-resources",
+    "activeMatch": "https://datacoves.com/learning-resources"
+  },
+  {
+    "text": "Git repos",
+    "link": "https://github.com/datacoves"
+  },
+  {
+    "text": "dbt docs",
+    "link": "https://docs.getdbt.com"
+  }
+]
+
+
